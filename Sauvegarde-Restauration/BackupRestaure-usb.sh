@@ -3,6 +3,7 @@
 # Description : Archive un r  pertoire 
 # puis le copie dans la cle usb SAUVEGARDE avec rsync
 # le 28/11/2017
+# Le 07/11/2020 modification du texte pour essai github de sublim-texte et sublime-merge
 #######################
 
 #### VARIABLES SAUVEGARDE ####
@@ -44,7 +45,7 @@ case $valret in
 esac
 
 #### MAIN ###############################################
-#### cas 1 SAUVEGARDE ###################################
+# cas 1 SAUVEGARDE
 sauvegarde ()
 
 #verifie si la cle est branchée
@@ -65,7 +66,7 @@ if [ ! -d $USB ]
 fi
 
 
-### Cas 2 RESTAURATION ####################
+# Cas 2 RESTAURATION
 restauration ()
 
 #verifie si la cle est branchée
