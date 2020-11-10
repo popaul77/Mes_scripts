@@ -4,7 +4,7 @@
 # puis le copie dans la cle usb SAUVEGARDE avec rsync
 # le 28/11/2017
 #######################
-## ceci est un test
+
 
 #### VARIABLES SAUVEGARDE ####
 USB=/media/$USER/SAUVEGARDE
