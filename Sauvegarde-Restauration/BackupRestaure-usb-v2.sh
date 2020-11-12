@@ -11,6 +11,7 @@ USB=/media/$USER/SAUVEGARDE
 OPTION_S="-dirtoq --exclude=.* --include=*.mp3 --log-file="$USB/rsync.log""
 DIRBAK_S=$USB/home-de-$USER/
 SOURCE_S=$HOME/Documents/Documentations
+### lksdjdfglpokirqejqgùpoejrf
 
 #### VARIABLES RESTAURATION ####
 USB=/media/$USER/SAUVEGARDE
