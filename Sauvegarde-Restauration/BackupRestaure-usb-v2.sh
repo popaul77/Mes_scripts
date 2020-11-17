@@ -1,9 +1,14 @@
 #!/bin/bash
 # http://www.gulliver77.org
-# Description : Archive un r  pertoire 
+# Description : Archive un r  pertoire
 # puis le copie dans la cle usb SAUVEGARDE avec rsync
 # le 28/11/2017
 #######################
+## toutes les conneris que je veux
+if [[ condition ]]; then
+	#statements
+fi
+
 
 #### VARIABLES SAUVEGARDE ####
 USB=/media/$USER/SAUVEGARDE
@@ -19,7 +24,7 @@ DIRBAK_R=$HOME/Documents/Restauration
 
 #### VERIFICATION DE L ENVIRONEMENT DE TRAVAIL ####
 # Check si le support USB est branché
-test -e $USB/ 
+test -e $USB/
 if [ "$?" != "0" ]; then
 	echo "La clé $USB n'est pas branchée."
 	exit 1
