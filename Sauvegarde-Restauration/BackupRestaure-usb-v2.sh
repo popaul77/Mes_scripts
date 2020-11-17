@@ -4,6 +4,11 @@
 # puis le copie dans la cle usb SAUVEGARDE avec rsync
 # le 28/11/2017
 #######################
+## toutes les conneris que je veux
+if [[ condition ]]; then
+	#statements
+fi
+
 
 
 #### VARIABLES SAUVEGARDE ####
