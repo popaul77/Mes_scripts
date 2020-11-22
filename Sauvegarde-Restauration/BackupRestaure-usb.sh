@@ -1,6 +1,6 @@
 #!/bin/bash
 # http://www.gulliver77.org
-# Description : Archive un r  pertoire 
+# Description : Archive un r  pertoire
 # puis le copie dans la cle usb SAUVEGARDE avec rsync
 # le 28/11/2017
 # Le 07/11/2020 modification du texte pour essai github de sublim-texte et sublime-merge
@@ -17,7 +17,6 @@ USB=/media/$USER/SAUVEGARDE
 OPTION_R="-dirtoq --exclude=.* --include=*.mp3 --log-file="$USB/rsync.log""
 SOURCE_R=$USB/home-de-$USER/
 DIRBAK_R=$HOME/Documents/Restauration
-
 
 
 ###### INTERFACE GRAPHIQUE ###############
@@ -50,13 +49,13 @@ sauvegarde ()
 
 #verifie si la cle est branchée
 if [ ! -d $USB ]
-	then 
-		echo  "Dernier avertissement !!! branches ta clé de sauvegarde !!!!" 
+	then
+		echo  "Dernier avertissement !!! branches ta clé de sauvegarde !!!!"
 		exit 0
 	else
 
 		if dpkg -s rsync | grep -q Status #verifie si le logiciel rsync est installé
-			then				
+			then
         		rsync $OPTION_S $SOURCE_S $DIRBAK_S #Copie rsync dans la cle sauvegarde
 		else
 			echo "rsync est necessaire pour réaliser cette operation"
@@ -72,18 +71,18 @@ restauration ()
 #verifie si la cle est branchée
 if [ ! -d $USB ]
 	then
-		echo  "Sans la clé ça va pas bien fonctionner cette restauration !!!" 
+		echo  "Sans la clé ça va pas bien fonctionner cette restauration !!!"
 		exit 0
 
 	else
 
 #verifie si le logiciel rsync est installé
-		if dpkg -s rsync | grep -q Status 
+		if dpkg -s rsync | grep -q Status
 			then
 	        	rsync $OPTION_R $SOURCE_R $DIRBAK_R #Restauration rsync vers le disque dur
 
 			else
-				echo "rsync est necessaire pour réaliser cette operation"		
+				echo "rsync est necessaire pour réaliser cette operation"
 				exit 0
 
 		fi
