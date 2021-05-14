@@ -1,0 +1,42 @@
+#/bin/bash
+
+#script de synchronisation entre les deux partitions systeme
+
+DATE=date +"%Y-%m-%d"
+
+#mise a jour et nettoyage
+apt update && apt upgrade -y
+apt autoremove && apt autoclean && apt clean
+
+#On monte sda1 dans /mnt
+mount -t auto /dev/sda1 /mnt
+
+Verifier que le disque est bien monté
+if [ ! -e /mnt/etc/fstab ] then ;
+	# envoyer message a root
+	exit 0
+else 
+	rsync -aAXv --fake-super --delete --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/*","/lost+found"} / /mnt > /home/gulliver/log-system-$DATE.txt
+
+fi
+
+umount /mnt
+
+#On monte sda5 dans /mnt
+mount -t auto /dev/sda5 /mnt
+
+#Verifier que le disque est bien monté
+if [  ! -d /mnt/home/gulliver ] then ;
+	# envoyer message a root
+exit 0
+else 
+	rsync -aAXv --fake-super --delete --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/home/*","/lost+found"} /home /mnt > /root/log-home-$DATE.txt
+
+fi
+
+mv /root/log-home-$DATE.txt /mnt/home/gulliver/LogRsync/log-home-$DATE.txt
+mv /root/log-home-$DATE.txt /home/gulliver/LogRsync/log-home-$DATE.txt
+
+exit 0
+
+umount /mnt

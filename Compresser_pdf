@@ -1,0 +1,12 @@
+#!/bin/bash
+
+while [ -z $Numero ] || [ $Numero != "stop" ]
+read -p 'Quelle page ? ' Numero
+do
+	echo "Allégeons la page $Numero."
+	pdf2ps $Numero.pdf
+	ps2pdf $Numero.ps $Numero.pdf
+	rm $Numero.ps
+
+	echo "Fini."
+done
