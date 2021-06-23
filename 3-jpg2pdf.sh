@@ -1,4 +1,5 @@
 #!/bin/bash
+# produced by GG
 
 convert *.jpg $DIR/livret.pdf
 #réduire le poids du pdf
