@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # emporte piece pour ariel
 # il sera necessaire de specifier les arguments (ex: 1 2 3 6 9)
-#
+# https://legacy.imagemagick.org/Usage/
 # on va utiliser convert crop $@ $? et %d + des couleurs pour le fun
 #######################################################################
 
@@ -19,22 +19,22 @@ uline="\e[4m"
 reset="\e[0m"
 
 #ma variable
-DEST=/home/jpg/test4
+#DEST=/home/jpg/test4
 
 #Création du dossier resultat
-if [ ! -d $DEST/resultat ]
+if [ ! -d ./resultat ]
   then
-    mkdir $DEST/resultat
+    mkdir resultat
 fi
 
 #on va dans le dossier d'execution
-cd $DEST
+#cd $DEST
 
 #c'est parti pour le script
 for i in "$@"
 	do
 		echo "Découpe de l'image $i"
-		convert $i.jpg -crop 2x1+0+0@ +repage +adjoin $DEST/resultat/$i"-decoupe_%d.jpg"
+		convert $i.jpg -crop 2x1+0+0@ +repage +adjoin resultat/$i"-decoupe_%d.jpg"
 	done
 
 # Message de fin
