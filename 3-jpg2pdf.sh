@@ -1,14 +1,22 @@
 #!/bin/bash
 # produced by GG
 
+# pour etre sur que tous les fichiers soit bien en jpg
+# on utilise rename (apt install rename).
+rename 's/\.jpe?g$/.jpg/i' *
+
 convert *.jpg $DIR/livret.pdf
 #réduire le poids du pdf
 gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=$DIR/livret_comp.pdf $DIR/livret.pdf
 # suprime le pdf non compressé
 rm livret.pdf
 
-# tout ça en une seule ligne
-#convert *.jpg $DIR/livret.pdf; gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=$DIR/livret_comp.pdf $DIR/livret.pdf; rm livret.pdf
+####################################################################################
+# tout ça en une seule lignepour ariel
+#### uniquement pour le fun.
+# rename 's/\.jpe?g$/.jpg/i' *; convert *.jpg $DIR/livret.pdf; gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=$DIR/livret_comp.pdf $DIR/livret.pdf; rm livret.pdf
+
+#######################################################################################
 
 # On peut utiliser des options avec dPDFSETTINGS
 # -dPDFSETTINGS Option	Description
