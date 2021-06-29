@@ -5,16 +5,17 @@
 # on utilise rename (apt install rename).
 rename 's/\.jpe?g$/.jpg/i' *
 
-convert *.jpg $DIR/livret.pdf
+convert *.jpg livret.pdf
 #réduire le poids du pdf
-gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=$DIR/livret_comp.pdf $DIR/livret.pdf
+gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=livret_comp.pdf livret.pdf
+
 # suprime le pdf non compressé
 rm livret.pdf
 
 ####################################################################################
 # tout ça en une seule lignepour ariel
 #### uniquement pour le fun.
-# rename 's/\.jpe?g$/.jpg/i' *; convert *.jpg $DIR/livret.pdf; gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=$DIR/livret_comp.pdf $DIR/livret.pdf; rm livret.pdf
+## rename 's/\.jpe?g$/.jpg/i' *; convert *.jpg livret.pdf; gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=livret_comp.pdf livret.pdf; rm livret.pdf
 
 #######################################################################################
 
