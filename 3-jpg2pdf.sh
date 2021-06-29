@@ -1,7 +1,7 @@
 #!/bin/bash
 # produced by GG
 
-# pour etre sur que tous les fichiers soit bien en jpg
+# pour etre sur que tous les fichiers sont bien en jpg
 # on utilise rename (apt install rename).
 rename 's/\.jpe?g$/.jpg/i' *
 
