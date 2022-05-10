@@ -6,6 +6,7 @@
 ## $1 parametre du dossier de départ du script (le dossier que l'on soite traiter)
 ## faire un essai du scrip en utilisant $1
 ## juste pour voir si le bugg est toujours là
+## toujours un test pour github vscodium
 
 
 
