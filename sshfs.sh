@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-Destination_1=/home/jpg/Raspi-1-hdd1
-Destination_2=/home/jpg/Raspi-1-hdd2
-Destination_3=/home/jpg/Raspi-1-hdd3
+Destination_1=$HOME/Raspi-1-hdd1
+Destination_2=$HOME/Raspi-1-hdd2
+Destination_3=$HOME/Raspi-1-hdd3
 #Destination_Zaclys=/home/jpg/Zaclys_clef
 Serveur=192.168.1.251
 
@@ -34,7 +34,7 @@ function montage ()
       echo "Impossible de monter le disque hdd3"
     fi
 
-#  sshfs z24942@sshfs.zaclys.com:/zclef     $Destination_Zaclys/
+#  sshfs monlogin@sshfs.zaclys.com:/zclef     $Destination_Zaclys/
 #   if [[ ! $? = "0" ]]; then
 #      echo "Impossible de monter le disque Zaclys_clef"
 #    fi
