@@ -3,7 +3,7 @@
 Destination_1=$HOME/Raspi-1-hdd1
 Destination_2=$HOME/Raspi-1-hdd2
 Destination_3=$HOME/Raspi-1-hdd3
-#Destination_Zaclys=/home/jpg/Zaclys_clef
+#Destination_Zaclys=$HOME/Zaclys_clef
 Serveur=192.168.1.251
 
 
