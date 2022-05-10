@@ -7,9 +7,9 @@ Chercher dans un dossier (/tmp)
 find /tmp
 find  . (recherche dans le dossier courrant)
 
-find . -name "nom du fichier rechercher"
+find . -name "nom du fichier a rechercher"
 find . -name "*.ogg"
-find . -iname "nom du fichier rechercher sans la case"
+find . -iname "nom du fichier a rechercher sans la case"
 find . -iname "Mon-Fichier.JPEG"
 find . -iname "*csv*"
 find . -type f -iname "*csv*"

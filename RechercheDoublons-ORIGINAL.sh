@@ -17,14 +17,14 @@ if [ ! -d Duplicates ]
 fi
 
 ###Nettoyage
-rm /home/jpg/Duplicates/duplicates.txt >/dev/null
-touch /home/jpg/Duplicates/duplicates.txt
+rm $HOME/Duplicates/duplicates.txt >/dev/null
+touch $HOME/Duplicates/duplicates.txt
 ### SEARCH
-fdupes -fr $1 > /home/jpg/Duplicates/duplicates.txt
-#fdupes -fr "/home/jpg/hdd1-raspi-1/Images" > /home/jpg/Duplicates/duplicates.txt
+fdupes -fr $1 > $HOME/Duplicates/duplicates.txt
+#fdupes -fr "$HOME/hdd1-raspi-1/Images" > $HOME/Duplicates/duplicates.txt
 ### Déplacement
-for ligne in $(cat /home/jpg/Duplicates/duplicates.txt)
+for ligne in $(cat $HOME/Duplicates/duplicates.txt)
 do
 echo "deplacement de $ligne"
-mv $ligne -t /home/jpg/Duplicates/
+mv $ligne -t $HOME/Duplicates/
 done
