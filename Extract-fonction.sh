@@ -1,5 +1,5 @@
 #!/bin/bash
-# permet d'extreaire directement une archive
+# permet d'extraire directement une archive
 # peut se mettre dans le bashrc
 # voir video https://youtu.be/ad1RFSwxV5o
 # a partir de 10 minutes.
