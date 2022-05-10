@@ -5,7 +5,7 @@
 ## Ameliorations : Passer au chemin relatif : passer des parametre au script.
 ## $1 parametre du dossier de départ du script (le dossier que l'on soite traiter)
 ## faire un essai du scrip en utilisant $1
-##Demo github fetch
+
 
 
 #Création du dossier Duplicates et du fichier duplicate.txt
