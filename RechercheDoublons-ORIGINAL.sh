@@ -13,7 +13,7 @@ cd $HOME
 if [ ! -d Duplicates ]
   then
     mkdir -p Duplicates
-    touch /home/jpg/Duplicates/duplicates.txt
+    touch $HOME/Duplicates/duplicates.txt
 fi
 
 ###Nettoyage
