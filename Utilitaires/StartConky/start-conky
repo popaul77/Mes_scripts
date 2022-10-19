@@ -1,0 +1,7 @@
+#! /bin/bash
+sleep 2
+
+conky -d -c ~/.conky/conky15/conky-all-gray-convert;
+# conky -d -c ~/.conky/conky15/conky-google-agenda-3-convert;
+
+exit

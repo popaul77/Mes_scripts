@@ -1,0 +1,7 @@
+#! /bin/bash
+sleep 2
+
+conky -c ~/.conky/.conkyrc;
+conky -c ~/.conky/.conkyrc2;
+
+exit
