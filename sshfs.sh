@@ -9,54 +9,54 @@ Serveur=192.168.1.251
 
 function reseau()
 {
-  ping -c1 $Serveur >/dev/null
+    ping -c1 $Serveur >/dev/null
 
-  if [[ ! $? = "0" ]]; then
-    echo "Pas de connexion reseau avec le serveur"
-    exit 1
-  fi
+    if [[ ! $? = "0" ]]; then
+        echo "Pas de connexion reseau avec le serveur"
+        exit 1
+    fi
 }
 
 
 
 function montage ()
 {
-  sshfs pi@raspi-1:hdd1 $Destination_1/
+    sshfs pi@raspi-1:hdd1 $Destination_1/
     if [[ ! $? = "0" ]]; then
-      echo "Impossible de monter le disque hdd1"
+        echo "Impossible de monter le disque hdd1"
     fi
-  sshfs pi@raspi-1:hdd2 $Destination_2/
+    sshfs pi@raspi-1:hdd2 $Destination_2/
     if [[ ! $? = "0" ]]; then
-      echo "Impossible de monter le disque hdd2"
+        echo "Impossible de monter le disque hdd2"
     fi
-  sshfs pi@raspi-1:hdd3 $Destination_3/
+    sshfs pi@raspi-1:hdd3 $Destination_3/
     if [[ ! $? = "0" ]]; then
-      echo "Impossible de monter le disque hdd3"
+        echo "Impossible de monter le disque hdd3"
     fi
 
-#  sshfs monlogin@sshfs.zaclys.com:/zclef     $Destination_Zaclys/
-#   if [[ ! $? = "0" ]]; then
-#      echo "Impossible de monter le disque Zaclys_clef"
-#    fi
+    #  sshfs monlogin@sshfs.zaclys.com:/zclef     $Destination_Zaclys/
+    #   if [[ ! $? = "0" ]]; then
+    #      echo "Impossible de monter le disque Zaclys_clef"
+    #    fi
 }
 
 # il faut verifier que le disque est bien dans /etc/mtab avant de le demonter
 # il faut verifier qu'il n'est plus utilisé.
 function demontage ()
 {
-  fusermount -u $Destination_1/
-  fusermount -u $Destination_2/
-  fusermount -u $Destination_3/
-#  fusermount -u $Destination_Zaclys/
+    fusermount -u $Destination_1/
+    fusermount -u $Destination_2/
+    fusermount -u $Destination_3/
+    #  fusermount -u $Destination_Zaclys/
 }
 
 if [[ $1 = "-u" ]]; then
-  reseau
-  demontage
-  #echo "demontage des disques hdd1, hdd2 et Zaclys_clef"
+    reseau
+    demontage
+    #echo "demontage des disques hdd1, hdd2 et Zaclys_clef"
 
 else
-  reseau
-  montage
-  #echo "montage des disques hdd1, hdd2 et zaclys_clef"
+    reseau
+    montage
+    #echo "montage des disques hdd1, hdd2 et zaclys_clef"
 fi

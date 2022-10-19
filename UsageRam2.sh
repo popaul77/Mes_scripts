@@ -2,7 +2,7 @@
 
 ## A tester avec la ligne suivante
 ## ps -ely |grep -v kworker |grep -v $$ |tr -s ' ' |cut -d " " -f3 |xargs UsageRam2.sh --pid
-
+## Permet de trouver quel est le processus qui consomme le plus
 
 OPTION=${1}
 PROCESS="${@:2}" ## process commence au parametre n° 2
