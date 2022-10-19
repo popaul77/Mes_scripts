@@ -14,7 +14,7 @@
 //Fonction compression des images
 
 
-    /
+*/
 
 
 function redimage($img_src,$img_dest,$dst_w,$dst_h,$alt,$title)
@@ -140,7 +140,7 @@ if($action=="accueil")
 //affichage galerie
 
 
-    /
+*/
 
 
 function isImg ($file){if (eregi(".jpg$",$file)){return true;}} // Fonction de verification des fichiers jpeg
