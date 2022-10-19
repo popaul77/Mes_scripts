@@ -1,6 +1,5 @@
 <?php
 // diaporama.php
-
 /* Ce script montre comment faire un diaporama en PHP
 
 		On n'affiche successivement toute les diapo d'un répertoire et on revient
@@ -17,7 +16,7 @@
 					passe l'url du script et le n° de la vignette
 
 
-    /
+*/
 
 
 
