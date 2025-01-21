@@ -1,12 +1,17 @@
-# YouTube Music Downloader
+# Music Downloader
 
 ## Description
-YouTube Music Downloader est une application graphique simple permettant de télécharger des vidéos YouTube en format MP3. Elle supporte le téléchargement de vidéos uniques et de playlists.
+Music Downloader est une application graphique simple permettant de télécharger des vidéos en format MP3 depuis différentes plateformes de streaming vidéo.
+
+## Plateformes supportées
+- YouTube (vidéos et playlists)
+- PeerTube
+- Et autres plateformes supportées par yt-dlp
 
 ## Fonctionnalités
 - Interface graphique GTK3
 - Téléchargement de vidéos uniques
-- Téléchargement de playlists complètes
+- Téléchargement de playlists
 - Conversion automatique en MP3
 - Choix du dossier de destination
 - Affichage de la progression en temps réel
@@ -15,17 +20,17 @@ YouTube Music Downloader est une application graphique simple permettant de tél
 
 1. Téléchargez l'archive tar.gz
 ```bash
-wget https://github.com/votre-repo/youtube-music-downloader/archive/v1.0.1.tar.gz
+wget https://github.com/votre-repo/music-downloader/archive/v1.0.2.tar.gz
 ```
 
 2. Décompressez l'archive
 ```bash
-tar xzf v1.0.1.tar.gz
+tar xzf v1.0.2.tar.gz
 ```
 
 3. Entrez dans le dossier
 ```bash
-cd youtube-music-downloader-1.0.1
+cd music-downloader-1.0.2
 ```
 
 4. Installez les dépendances requises
@@ -48,11 +53,11 @@ chmod +x install.sh
 ## Guide d'utilisation
 
 ### Lancement de l'application
-- Depuis le menu des applications : cherchez "YouTube Music Downloader"
-- Depuis le terminal : `youtube-music-downloader`
+- Depuis le menu des applications : cherchez "Music Downloader"
+- Depuis le terminal : `music-downloader`
 
 ### Télécharger des vidéos
-1. Copiez l'URL d'une vidéo YouTube ou d'une playlist
+1. Copiez l'URL d'une vidéo depuis une plateforme supportée
 2. Collez l'URL dans la zone de texte de l'application
 3. (Optionnel) Changez le dossier de destination en cliquant sur "Changer"
 4. Cliquez sur "Télécharger"
@@ -69,7 +74,7 @@ chmod +x install.sh
 - Un message confirme la fin du téléchargement
 
 ### Dossier de destination
-- Par défaut : `~/Musique/YouTube`
+- Par défaut : `~/Musique/Downloads`
 - Pour changer : cliquez sur le bouton "Changer" et sélectionnez un nouveau dossier
 
 ## Notes
@@ -79,3 +84,5 @@ chmod +x install.sh
 
 ## Support
 Pour signaler un bug ou suggérer une amélioration, veuillez créer une issue sur le dépôt GitHub. 
+
+

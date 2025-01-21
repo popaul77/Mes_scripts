@@ -12,17 +12,16 @@ chmod +x "$install_dir/extract_youtube.py"
 mkdir -p "$HOME/.local/share/applications"
 
 # Créer le fichier .desktop
-cat > "$HOME/.local/share/applications/youtube-music-downloader.desktop" << EOF
+cat > ~/.local/share/applications/youtube-music-downloader.desktop << EOL
 [Desktop Entry]
-Name=YouTube Music Downloader
-Comment=Télécharge de la musique depuis YouTube
-Exec=python3 $install_dir/extract_youtube.py
+Name=Music Downloader
+Comment=Télécharge des vidéos en MP3 depuis YouTube, PeerTube et autres
+Exec=~/.local/share/youtube-music-downloader/youtube-music-downloader
 Icon=audio-x-generic
 Terminal=false
 Type=Application
 Categories=AudioVideo;Audio;
-StartupNotify=true
-EOF
+EOL
 
 # Rendre le fichier .desktop exécutable
 chmod +x "$HOME/.local/share/applications/youtube-music-downloader.desktop"
