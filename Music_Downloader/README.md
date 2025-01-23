@@ -26,7 +26,7 @@ wget https://github.com/popaul77/Mes_scripts/blob/main/Music_Downloader/Musique_
 
 2. Décompressez l'archive
 ```bash
-tar xzf v1.0.2.tar.gz
+tar xzf Musique_Youtube-1.0.2.tar.gz
 ```
 
 3. Entrez dans le dossier
